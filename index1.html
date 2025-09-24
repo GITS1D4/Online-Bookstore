@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Mart</title>
+    <link rel="stylesheet" href="stylebook.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--for icons on webpage-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>src="http://unpkg.com/scrollreveal"</script><!--for matter to apper or reveal on when scrolled-->
+</head>
+<body>
+    <header>
+        <a href="profile.html" class="logo">
+            <img src="images/logo1.jpeg" alt="logo">
+              <span class="site-name">BMART</span>
+
+        </a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#BEST BOOKS">Best Sellers</a></li>
+            <li><a href="#CATEGORY">Categories</a></li>
+            <li><a href="sellbooks.html">Sell Books</a></li>
+            <li><a href="#" onclick="openPopup()">Subscriptions</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="login.html" class="login">LOGIN</a>
+            <a href="register.html" class="Register">REGISTER</a>
+        </div>
+    </header>
+    <!-- Image Slider -->
+  <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="https://img.freepik.com/premium-vector/flash-sale-banner-web-social-media-sale-banner-promotion-template_1213989-357.jpg" alt="Ad 1" />
+        <img src="https://fivebooks.com/best-books/popular-books-of-the-last-month/shareimage.jpg" alt="Ad 2" />
+        <img src="https://allthingstarget.com/wp-content/uploads/2016/06/target-book-pic.jpg" alt="Ad 3" />
+        <img src="https://img.freepik.com/premium-vector/flash-sale-banner-web-social-media-sale-banner-promotion-template_1213989-357.jpg" alt="Ad 1" />
+        <img src="https://fivebooks.com/best-books/popular-books-of-the-last-month/shareimage.jpg" alt="Ad 2" />
+        <img src="https://allthingstarget.com/wp-content/uploads/2016/06/target-book-pic.jpg" alt="Ad 3" />
+        <img src="https://img.freepik.com/premium-vector/flash-sale-banner-web-social-media-sale-banner-promotion-template_1213989-357.jpg" alt="Ad 1" />
+        <img src="https://fivebooks.com/best-books/popular-books-of-the-last-month/shareimage.jpg" alt="Ad 2" />
+        <img src="https://allthingstarget.com/wp-content/uploads/2016/06/target-book-pic.jpg" alt="Ad 3" />
+      </div>
+    </div>
+  </div>
+     <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h2>Select Your Plan</h2>
+      <div class="plan" onclick="selectPlan('Monthly')">📅 Monthly - ₹199</div>
+      <div class="plan" onclick="selectPlan('Quarterly')">📅 Quarterly - ₹499</div>
+      <div class="plan" onclick="selectPlan('Yearly')">📅 Yearly - ₹1499</div>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function selectPlan(plan) {
+      alert("You selected: " + plan + " Plan");
+      closePopup();
+    }
+  </script>
+  <!-- home section -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1> SELL SMART.<br>BUY WISE.<br>ONLY AT <span class="span1"> BMART</span></h1>
+            <P>Explore,buy,and sell books across a wide range of genres--all in one place at BMART.</P>
+        </div>
+        <div class="form-container">
+        <form action="product.html" method="get">
+            <select name="enter the book title" id="#book"required>
+               <option value="disabled select">Select Your Title</option>
+                <option value="The Vansihed Days">The Vansihed Days</option>
+                <option value="Dune & project MailMary">Dune & project MailMary</option>
+                <option value="Dopamine detox">Dopamine detox</option>
+                <option value="Harry potter">Harry potter</option>
+                <option value="Crime & punishment">Crime & punishment</option>
+
+            </select>
+            <select name="select category" required>
+                <option value="disabled selected">Select category</option> 
+                <option value="Novels"> Novels</option>
+                <option value="Story Books"> Story Books</option>
+                <option value="Competitive Exam">Competitive Exam</option>
+                <option value="School Books">School Books</option>
+                <option value="Magazines"> Magazines</option>
+                <option value="Medical"> Medical</option>
+            </select>
+
+            <select name="Language" >
+                <option value="disabled selected">Select Your Language</option> 
+                <option value="English">English</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Hindi">Hindi</option>
+                <option value="marati">Marati</option>
+                <option value="Kanada">kanada</option>
+            </select>
+            <button type="submit">Submit</button>
+         </form>
+        </div>
+     </section>
+     <br id="BEST BOOKS">
+      <!-- top books container -->
+       <br>
+       <br>
+     <div class="books">
+        <div class="heading1">
+            <h2><span>Top Recommendations</span></h2>
+            <h1>Explore Our Top Recommendations From Our Top Books Collection</h1>
+        </div>
+        
+        <!-- books grid -->
+        <div class="books-container">
+            <!-- book 1 -->
+            <div class="box">
+                <a href="product.html"> <img src="images/vanished days.jpg" alt="The Vanished Days "></a>
+            </div>
+            <div class="box">
+                <a href="#"> <img src="images/dune.jpg" alt="Dune & project MailMary "></a>
+            </div>
+            <div class="box">
+                <a href="#"><img src="images/detox.jpg" alt="Dopamine detox"></a>
+            </div>
+            <div class="box">        
+                <a href="#"><img src="images/harry potter.webp" alt="Harry potter "></a>
+            </div>
+        </div>
+    </div>
+    <br id="CATEGORY">
+    <!-- categories section -->
+     <br>
+     <br>
+     <div class="heading1">
+            <div class="heading1">
+            <h2><span>Categories</span></h2>
+            <h1>Explore the Categories to Buy & Sell Books</h1>
+        </div>
+        <section class="category-section">
+    <div class="category-box story">
+      <i class='bx bx-book-open'></i>
+      <h3>Story</h3>
+      <p>Comics, Fiction, Non-Fiction, Others</p>
+      <a href="storybooks.html" class="btn">VIEW ALL</a>
+    </div>
+
+    <div class="category-box magazine">
+      <i class='bx bx-book'></i>
+      <h3>Magazine</h3>
+      <p>Automobile, Bollywood, Education</p>
+      <a href="magazines.html" class="btn">VIEW ALL</a>
+    </div>
+
+    <div class="category-box medical">
+      <i class='bx bx-plus-medical'></i>
+      <h3>Medical</h3>
+      <p>MBBS, Nursing, Homeopathy, Medicine</p>
+      <a href="medical.html" class="btn">VIEW ALL</a>
+    </div>
+
+    <div class="category-box competitive">
+      <i class='bx bx-book-reader'></i>
+      <h3>Competitive</h3>
+      <p>UPSC, SSC, Banking, Government Exams</p>
+      <a href="competative.html" class="btn">VIEW ALL</a>
+    </div>
+  </section>
+    
+  <!-- Reviews Section -->
+     <section class="reviews" id="REVIEWS">
+        <div class="heading1">
+            <h2><span>REVIEWS</span></h2>
+            <h1>Our Clients Satisfaction </h1>
+        </div>
+         
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="images/rev1.jpeg" alt="customer 1">
+                </div>
+
+                <h2>Heera</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+                <p>I recently had a great experience shopping at this online bookstore. Their detailed descriptions and customer reviews helped me choose the right titles.The payment options were secure and what impressed me most was the fast shipping—my order arrived well-packaged and on time.</p>
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="images/rev2.jpeg" alt="customer 2">
+                </div>
+
+                <h2>Arun</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>As a passionate book lover, Bmart has become my go-to online bookstore. Their vast collection spans every genre I adore, and the website is easy to browse. Orders arrive quickly and in perfect shape. With secure payments and reliable service, Bmart makes book shopping a true delight from home.</p>
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="images/rev3.jpeg" alt="customer 3">
+                </div>
+                <h2>Tina</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>I've been using this online bookstore for a while and love it. The site is user-friendly, offers a great book selection with helpful descriptions, secure payments, and fast, reliable shipping. It's perfect for readers who prefer the convenience of shopping from home.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="FAQs" id="FAQs">
+        <div class="heading">
+            <span>FAQs</span>
+            <h1>Question asked frequently</h1>
+        </div>
+        <div class="FAQs-container">
+            <div class="box"></div>
+
+            <h2>Q.Are there enough categories and genres to choose from?</h2>
+            <p>Yes, the bookstore offers a wide variety of genres including fiction, non-fiction, mystery, fantasy, self-help, and children's books, catering to diverse reading preferences.</p>
+
+            <h2>Q.How fast is the shipping, and how well are the books packaged?</h2>
+            <p>Shipping is generally fast, with most orders arriving within 3-5 business days. Books are carefully packaged to avoid damage during transit.</p>
+
+            <h2>Q.How responsive is the customer service if any issues arise?</h3>
+            <p>Customer service is responsive and helpful, available via chat, email, and phone during business hours to resolve any concerns quickly.</p>
+        </div>
+    </section>
+<!-- Footer section -->
+     <footer>
+        <!-- Centered Columns -->
+        <div class="footer-content">
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p> <p style="display: flex; align-items: center; gap: 8px;">
+  <i class="fas fa-envelope"></i>
+  <a href="mailto:bmart8126@gmail.com?subject=Subject%20Here&body=Body%20Text%20Here">bmart@gmail.com</a>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61578265880006"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/B_Mart__"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/bmart.0/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>CATEGORY</title>
+
+        <style>
+            *{
+                text-decoration: none;
+                list-style: none;
+                margin:0;
+                padding:0;
+                font-family: "popppins",sans-serif;
+                box-sizing: border-box;
+            }
+            .heading{
+                text-align: center;
+                margin: 50px 0;
+            }
+            .heading span{
+                font-weight: 1000;
+                height: 30;
+                width:30;
+                text-transform: uppercase;
+                color: #f0803c;
+            }
+
+
+            .box span{
+                font-weight: 1000;
+                height: 30;
+                width:30;
+                text-transform: uppercase;
+                color: #3c81f0;
+            }
+            .heading h1{
+                font-size: 2rem;
+                color: #333;
+                margin: 0.5rem;
+            }
+            .books{
+                padding: 0 100px;
+            }
+            .books-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+            .books-container .box{
+                padding: 10px;
+                border-radius: 1rem;
+                box-shadow: 1px 4px 41px rgba(0,0,0,0.2);
+            }
+            .books-container .box img {
+                width: 100%;
+                height: 500px; /* Added px unit here */
+                border-radius: 1rem;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .books-container .box h2{
+                font-weight:550;
+            }
+            .books-container .box h3{
+                font-size: large;
+                font-weight: 600;
+                margin: 0.2rem 0 0.5rem;
+                color: #a7390ded;
+            }
+            .books-container .box .price{
+                font-size:medium;
+                color:rgb(0, 34, 187)
+            }
+            .books-container .box .btn{
+                display: flex;
+                justify-content: center;
+                background-color: #75a047;
+                color: #fff;
+                padding: 10px;
+                border-radius: 0.5rem;
+                margin: 3px;
+            }
+            .books-container .box .btn:hover{
+                background: #f0803c;
+            }
+            .categories-section {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: white;
+            border: black solid 2px;
+            }
+
+            .categories {
+            display: flex;
+            gap: 20px;
+            }
+
+            .category {
+            flex: 0 0 250px;
+            color: white;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            }
+
+            .category .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            }
+
+            .category h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            }
+            .category .btn {
+            border: 2px solid white;
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            }
+
+            .category .btn:hover {
+            background-color: white;
+            color: #333;
+            }
+            .stars {
+            color: #f5c518; /* golden yellow */
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+            display: flex;
+            gap: 3px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <h2><span>CATEGORY BOOKS</span></h2>
+   
+        </div>
+        
+        <!-- books grid -->
+        <div class="books-container">
+            <!-- book 1 -->
+            <div class="box">
+                <a href="#"><img src="images/Mind.jpg" alt="The Mind"></a>
+                
+                
+                <h2>The Mind Of Strategist</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Kenichi Ohmae</h3>
+                <h3 class="price">Rs.800/-</h3>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="images/slight.jpg" alt="slight "></a>
+                
+                <h2>The Slight Edge</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Jeff Olson</h3>
+                <h3 class="price">Rs.500/-</h3>
+            </div>
+
+
+             <div class="box">
+                <a href="#"><img src="images/limitless.jpg" alt="limitless "></a>
+                
+                <h2>limitless</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Jim Kwik</h3>
+                <h3 class="price">Rs.256/-</h3>
+            </div>
+
+             <div class="box">
+                <a href="#"><img src="images/journalist.jpg" alt="journalist "></a>
+                
+                <h2>The House Of journalist </h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Tim Finch</h3>
+                <h3 class="price">Rs.345/-</h3>
+            </div>
+
+             <div class="box">
+                <a href="#"><img src="images/black.jpg" alt="Black America"></a>
+                
+                <h2>Black America</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Tim Hashaw</h3>
+                <h3 class="price">Rs.450/-</h3>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="images/business.jpg" alt="The Business"></a>
+                
+                <h2>The Business</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Richard Branson</h3>
+                <h3 class="price">Rs.267/-</h3>
+            </div>
+            
+            <div class="box">
+                <a href="#"><img src="images/the kabalah.jpg" alt="The kabalah"></a>
+                
+                <h2>The Kabbalah Of Money</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Rabbi Nilton</h3>
+                <h3 class="price">Rs.120/-</h3>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="images/wealth.jpg" alt="wealth"></a>
+                
+                <h2>The Wealth MindSet </h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Brian R. Walker</h3>
+                <h3 class="price">Rs.171/-</h3>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

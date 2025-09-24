@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile </title>
+
+    <style>
+        body{
+            font-family: arial,sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* nav bar styling */
+        header {
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0077b6;
+            padding: 25px 30px;
+            color: #fff;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            }
+            .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* space between logo image and text */
+            }
+            .logo img {
+            height: 50px;
+            border-radius: 30px;
+            }
+            .site-name {
+            font-size: 1.8rem;
+            color: #A4EB3C;
+            font-weight: 700;
+            line-height: 1;
+            }
+            .navbar {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: large;
+            }
+
+            .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            }
+
+            .navbar li a:hover {
+            color: #ffd60a;
+            }
+
+            .profilelogo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            }
+            .profilelogo img{
+            height: 50px;
+            border-radius:100px;
+            }
+
+
+            .header-btn a {
+            margin-left: 15px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #0077b6;
+            background-color: #fff;
+            font-weight: 600;
+            transition: 0.3s ease;
+             }
+            
+             /* form container styling */
+
+        .form-container
+        {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        .form-container h2{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+
+        }
+
+        .form-container input,
+        .form-container select{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing:border-box;
+            font-size: 14px;
+        }
+        .form-container button{
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .form-container button:hover
+        {
+            background-color: orange;
+        }
+    </style>
+
+
+</head>
+<body>
+     <!-- nav bar -->
+    <header>
+        <a href="profile.html" class="logo">
+            <img src="images/logo1.jpeg" alt="logo">
+              <span class="site-name">BMART</span>
+
+        </a>
+        <ul class="navbar">
+             <li><a href="index1.html#home">Home</a></li>
+            <li><a href="index1.html#BEST BOOKS">Best Sellers</a></li>
+            <li><a href="index1.html#CATEGORY">Categories</a></li>
+            <li><a href="sellbooks.html">Sell Books</a></li>
+            <li><a href="#">Subscriptions</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="login.html" class="login">LOGIN</a>
+            <a href="register.html" class="Register">REGISTER</a>
+        </div>
+    </header>
+    <!-- edit form container -->
+    <section>
+        
+        <form>
+        <div class="form-container">
+            <h2>Edit Your Profile</h2>
+            
+            <input type="name" name="quantity" placeholder="Enter New User Name" required min="6"/>
+            <br><br>
+            <input type="email" name="quantity" placeholder="Enter New Email"/>
+            <br><br>
+            <input type="phone number" name="quantity" placeholder="Enter New Phone Number" required min="10"/>
+            <br><br>
+            
+            
+            
+            <a href="profile.html"><button type="Edit">Edit</button></a>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

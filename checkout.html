@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      display: flex;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-section {
+      flex: 2;
+      padding-right: 20px;
+    }
+    .summary-section {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .payment-methods {
+      display: flex;
+      gap: 10px;
+    }
+    .payment-methods button {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #eee;
+      cursor: pointer;
+    }
+    .payment-methods button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .card-fields, .upi-fields {
+      margin-top: 10px;
+    }
+    .upi-logos {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .upi-logos img {
+      height: 40px;
+    }
+    .checkout-button {
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .checkout-button:hover {
+      background-color: #45a049;
+    }
+    .book-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="form-section">
+    <h2>Complete Your Purchase</h2>
+
+    <div class="section">
+      <label>Basic Information</label>
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Company Name (optional)">
+    </div>
+
+    <div class="section">
+      <label>Billing Address</label>
+      <input type="text" placeholder="Street">
+      <input type="text" placeholder="City">
+      <input type="text" placeholder="Country">
+      <input type="text" placeholder="ZIP">
+    </div>
+
+    <div class="section">
+      <label>Payment Method</label>
+      <div class="payment-methods">
+        <button type="button" class="payment-option active" data-method="card">Card</button>
+        <button type="button" class="payment-option" data-method="upi">UPI</button>
+        <button type="button" class="payment-option" data-method="cod">Cash on Delivery</button>
+      </div>
+
+      <div class="card-fields payment-fields" id="card">
+        <input type="text" placeholder="Credit Card Number">
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="MM/YY">
+          <input type="text" placeholder="CVV">
+        </div>
+      </div>
+
+      <div class="upi-fields payment-fields" id="upi" style="display: none;">
+        <div class="upi-logos">
+           <img src="https://telecomtalk.info/wp-content/uploads/2022/12/gpay-how-to-create-or-find-upi.jpg.webp" alt="GPay">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStCMMm1o1RmcTLaofZAWNdEEGhSccXNuvMDw&s" alt="PhonePe">
+          <img src="https://img-cdn.thepublive.com/filters:format(webp)/sambad-english/media/post_attachments/wp-content/uploads/2017/02/Paytm.png" alt="Paytm">
+        </div>
+      </div>
+
+      <div class="payment-fields" id="cod" style="display: none;">
+        <p>You will pay in cash upon delivery.</p>
+      </div>
+    </div>
+
+   <a href="thankyou.html"><button class="checkout-button">Checkout Now</button></a>
+  </div>
+
+  <div class="summary-section">
+    <h3>Purchase Details</h3>
+    <p>Quantity: <span id="book-quantity">1</span></p>
+    <p>Selected Book: <span id="book-title"></span></p>
+    <p>Price: <span id="book-price"></span></p>
+    <p>Setup Fee: $1.00</p>
+    <p><strong>Total: <span id="total-price"></span></strong></p>
+
+    <img class="book-image"src="images/vanished days.jpg" alt="Book Cover">
+  </div>
+</div>
+
+<script>
+  const paymentButtons = document.querySelectorAll(".payment-option");
+
+  paymentButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      paymentButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const method = btn.getAttribute("data-method");
+
+      document.getElementById("card").style.display = "none";
+      document.getElementById("upi").style.display = "none";
+      document.getElementById("cod").style.display = "none";
+
+      const selected = document.getElementById(method);
+      if (selected) selected.style.display = "block";
+    });
+  });
+
+  // Extract book info from URL
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title") || "Unknown Title";
+  const author = params.get("author") || "Unknown Author";
+  const price = parseFloat(params.get("price")) || 0.00;
+  const image = params.get("img") || "https://via.placeholder.com/150";
+
+  document.getElementById("book-title").innerText = title;
+  document.getElementById("book-price").innerText = `$${price.toFixed(2)}`;
+  document.getElementById("total-price").innerText = `$${(price + 1.00).toFixed(2)}`;
+  document.getElementById("book-image").src = image;
+</script>
+
+</body>
+</html>

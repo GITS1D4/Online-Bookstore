@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>CATEGORY</title>
+
+        <style>
+                        *{
+                text-decoration: none;
+                list-style: none;
+                margin:0;
+                padding:0;
+                font-family: "popppins",sans-serif;
+                box-sizing: border-box;
+            }
+            .heading{
+                text-align: center;
+                margin: 50px 0;
+            }
+            .heading span{
+                font-weight: 1000;
+                height: 30;
+                width:30;
+                text-transform: uppercase;
+                color: #f0803c;
+            }
+
+
+            .box span{
+                font-weight: 1000;
+                height: 30;
+                width:30;
+                text-transform: uppercase;
+                color: #3c81f0;
+            }
+            .heading h1{
+                font-size: 2rem;
+                color: #333;
+                margin: 0.5rem;
+            }
+            .books{
+                padding: 0 100px;
+            }
+            .books-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+            .books-container .box{
+                padding: 10px;
+                border-radius: 1rem;
+                box-shadow: 1px 4px 41px rgba(0,0,0,0.2);
+            }
+            .books-container .box img {
+                width: 100%;
+                height: 500px; /* Added px unit here */
+                border-radius: 1rem;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .books-container .box h2{
+                font-weight:550;
+            }
+            .books-container .box h3{
+                font-size: large;
+                font-weight: 600;
+                margin: 0.2rem 0 0.5rem;
+                color: #a7390ded;
+            }
+            .books-container .box .price{
+                font-size:medium;
+                color:rgb(0, 34, 187)
+            }
+            .books-container .box .btn{
+                display: flex;
+                justify-content: center;
+                background-color: #75a047;
+                color: #fff;
+                padding: 10px;
+                border-radius: 0.5rem;
+                margin: 3px;
+            }
+            .books-container .box .btn:hover{
+                background: #f0803c;
+            }
+            .categories-section {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: white;
+            border: black solid 2px;
+            }
+
+            .categories {
+            display: flex;
+            gap: 20px;
+            }
+
+            .category {
+            flex: 0 0 250px;
+            color: white;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            }
+
+            .category .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            }
+
+            .category h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            }
+            .category .btn {
+            border: 2px solid white;
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            }
+
+            .category .btn:hover {
+            background-color: white;
+            color: #333;
+            }
+            .stars {
+            color: #f5c518; /* golden yellow */
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+            display: flex;
+            gap: 3px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <h2><span>CATEGORY BOOKS</span></h2>
+   
+        </div>
+        
+        <!-- books grid -->
+        <div class="books-container">
+            <!-- book 1 -->
+            <div class="box">
+                <a href="#"><img src="images/MA.jpg" alt="The Art of M&A"></a>
+                
+                
+                <h2>The Art of M&A</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Kenneth Smith</h3>
+                <h3 class="price">Rs.500/-</h3>
+            </div>
+
+            <div class="box">
+              <a href="#"><img src="images/science.jpg" alt="Science of Success"></a>
+                <h2>Science of Success</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Charles</h3>
+                <h3 class="price">Rs.488/-</h3>
+            </div>
+
+
+             <div class="box">
+               <a href="#"><img src="images/ncert.jpeg" alt="NCERT SUMMARY "></a>
+                
+                <h2>NCERT SUMMARY</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Team Disha Experts</h3>
+                <h3 class="price">Rs.308/-</h3>
+            </div>
+
+             <div class="box">
+                <a href="#"><img src="images/chemistry.jpg" alt="Chemistry"></a>
+                
+                <h2>Chemistry</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Dr.R.S.Aggarwal</h3>
+                <h3 class="price">Rs.405/-</h3>
+            </div>
+
+             <div class="box">
+                <a href="#"><img src="images/competative.jpg" alt="Solving Mathematical Problems"></a>
+                
+                <h2>Solving Mathematical Problems</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Terence</h3>
+                <h3 class="price">Rs.349/-</h3>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="images/maths.jpg" alt="Competative Strategies"></a>
+                
+                <h2>Competative Strategies</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Michael</h3>
+                <h3 class="price">Rs.287/-</h3>
+            </div>
+            
+            <div class="box">
+                <a href="#"><img src="images/economy.jpeg" alt="Economy MCQs"></a>
+                
+                <h2>Economy MCQs</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Vivek Singh</h3>
+                <h3 class="price">Rs.136/-</h3>
+            </div>
+
+            <div class="box">
+                <a href="#"><img src="images/computer.jpeg" alt="Computer Awareness"></a>
+                
+                <h2>Computer Awareness</h2>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <h3><span>Author: </span>Shaifali Saini</h3>
+                <h3 class="price">Rs.171/-</h3>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

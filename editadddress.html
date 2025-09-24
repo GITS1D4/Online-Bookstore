@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Address</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            }
+                    /* nav bar styling */
+        header {
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0077b6;
+            padding: 25px 30px;
+            color: #fff;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            }
+            .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* space between logo image and text */
+            }
+            .logo img {
+            height: 50px;
+            border-radius: 30px;
+            }
+            .site-name {
+            font-size: 1.8rem;
+            color: #A4EB3C;
+            font-weight: 700;
+            line-height: 1;
+            }
+            .navbar {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: large;
+            }
+
+            .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            }
+
+            .navbar li a:hover {
+            color: #ffd60a;
+            }
+
+            .profilelogo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            }
+            .profilelogo img{
+            height: 50px;
+            border-radius:100px;
+            }
+
+
+            .header-btn a {
+            margin-left: 15px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #0077b6;
+            background-color: #fff;
+            font-weight: 600;
+            transition: 0.3s ease;
+             }
+            
+             /* form container styling */
+
+            .form-container{
+                background-color: #ffffffab;
+                padding: 60px 100px;
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                width: 100%;
+                max-width: 600px;
+            }
+            .form-container h2{
+               color: #060505;
+               text-align: center;
+               font-size: 1.8rem;
+               margin-bottom: 15px;
+           }
+            
+                input[type="text"]{
+                width: 100%;
+                padding: 12px 70px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 16px;
+                }
+
+                input:focus {
+                border-color: #f39c12;
+                outline: none;
+                }
+
+                button {
+                width: 100%;
+                padding: 12px;
+                background-color: rgb(47, 113, 255);
+                color: white;
+                font-size: 16px;
+                border: none;
+                border-radius: 6px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                }
+
+
+                button:hover {
+                background-color: #e67e22;
+                }        
+    </style>
+</head>
+<body>
+     <!-- nav bar -->
+    <header>
+        <a href="profile.html" class="logo">
+            <img src="images/logo1.jpeg" alt="logo">
+              <span class="site-name">BMART</span>
+
+        </a>
+        <ul class="navbar">
+             <li><a href="index1.html#home">Home</a></li>
+            <li><a href="index1.html#BEST BOOKS">Best Sellers</a></li>
+            <li><a href="index1.html#CATEGORY">Categories</a></li>
+            <li><a href="sellbooks.html">Sell Books</a></li>
+            <li><a href="#">Subscriptions</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="login.html" class="login">LOGIN</a>
+            <a href="register.html" class="Register">REGISTER</a>
+        </div>
+    </header>
+    <!-- edit  form container -->
+    <section>
+        <div class="form-container">
+            <h2>Edit Address</h2>
+            
+            <input type="text" name="quantity" placeholder="Enter new Address" required min="20"/>
+            <br><br>
+            <input type="text" name="quantity" placeholder="Re-enter the new address" required min="20"/>
+            <br><br>
+            <a href="profile.html"><button type="submit">Update Address</button></a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
